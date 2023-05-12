@@ -28,17 +28,17 @@ def game_timer():
         duration -= 1
         turtle_time.clear()
         game_utils.time_text_loc(screen=screen, turtle_time=turtle_time, duration=duration)
-        turtle_game.onclick(turtle_count)
+        turtle_game.onclick(catch_count)
         screen.ontimer(game_timer, t=1000)
     else:
         game_utils.end_game(turtle_end=turtle_game)
         turtle_game.hideturtle()
 
 
-def turtle_count(x, y):
-    turtle_point.clear()
+def catch_count(x, y):
     global count
     count += 1
+    turtle_point.clear()
     game_utils.point_text_loc(screen=screen, turtle_point=turtle_point, count=count)
 
 
