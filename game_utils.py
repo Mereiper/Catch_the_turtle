@@ -17,3 +17,10 @@ def random_turtle_loc(screen, turtle_game):
     random_y = random.randrange(-int(screen.window_height() // 3 - 100), int(screen.window_height() // 3 - 100))
     turtle_game.goto(random_x, random_y)
     turtle_game.showturtle()
+
+
+def time_tex_loc(screen, turtle_time, duration=0):
+    turtle_time.hideturtle()
+    turtle_time.penup()
+    turtle_time.goto(-40, int(screen.window_height() // 3 + 70))
+    turtle_time.write(f"Time: {duration}", font=("Verdana", 20, "bold"))
