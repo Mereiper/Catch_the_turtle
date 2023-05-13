@@ -42,7 +42,9 @@ def catch_count(x, y):
     game_utils.point_text_loc(screen=screen, turtle_point=turtle_point, count=count)
 
 
+turtle.tracer(0)
 turtle_timer()
 game_timer()
+turtle.tracer(1)
 
 turtle.mainloop()
